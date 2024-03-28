@@ -217,15 +217,13 @@
 												<input type="text" id="userEmail">
 											</div>											
 										</div>
-									<form id="frm_usuario">
-										<ul class="actions">
-											<li><button onclick="cambiarNombre()" class="button submit">Actualizar nombre</button></li>
-										</ul>
+									
+										
 										<br>
 										<ul class="actions">
 											<li><button onclick="logout()" type="button" class="button">Salir</button></li>
 										</ul>
-									</form>
+									
 									</form>
 								</section>
 								<a href="#" class="image"><img class="imagen_perfil" src="images/astrnautaPerfil.png" alt="" data-position="top center" /></a>
@@ -465,21 +463,6 @@
 
 				</script>
 
-				<script>
-					function cambiarNombre() {
-						var nuevoNombre = prompt("Ingresa tu nuevo nombre:");
-						if (nuevoNombre !== null) {
-							// Actualiza el campo de nombre en el formulario
-							var userName = document.getElementById('userName');
-							if (userName) {
-								userName.value = nuevoNombre;
-							}
-							// Envía el formulario
-							document.getElementById("frm_usuario").submit();
-						}
-					}
-				
-				</script>
 
 
 			
