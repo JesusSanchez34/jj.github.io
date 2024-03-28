@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pagina web del espacio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.imagen_perfil {
+				width: 500px;
+				height: auto;
+				max-width: 500px;
+				max-height: 500px;
+			}
+			label.error {
+				color: rgb(245, 71, 112)!important;
+				font-size: 12px;
+			}
+			input.error{
+				border-color: rgb(245, 71, 112) !important;
+				border-color: rgb(245, 71, 112) !important;
+				border: solid 2px rgb(245, 71, 112) !important;
+			}
+			input:focus.error{
+				color: rgb(255, 162, 162);
+				border-color: rgb(255, 162, 162);
+				border-color: rgb(255, 162, 162);
+				border: solid 2px rgb(255, 162, 162)!important;
+			}
+		</style>
+
+		<!-- <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script> -->
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Bienvenido</a></li>
+							<li><a href="#one">Misterios del espacio</a></li>
+							<li><a href="#two">Que hacemos?</a></li>
+							<li><a href="#three" class="formLogin">Registro</a></li>
+							<li><a href="#usuario" class="isLogged">Usuario</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>MetaAstronomia</h1>
+							<p>Aplicacion WEB diseñada para los aficionados de la astronomia
+							y realizada por Jesus Sanchez Rodriguez</a>.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Más sobre nosotros</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/andromeda.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Galaxia de andromeda</h2>
+									<p>Conoce los detalles acerca de nuestra galaxia vecina.</p>
+									<ul class="actions">
+										<li><a href="generic.html" class="button">Conoce más</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/ton618.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Ton 618</h2>
+									<p>Descubre los misterios del asombroso agujero negro mas grande que se ha descubierto.</p>
+									<ul class="actions">
+										<li><a href="generic.html" class="button">Conoce más</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Que hacemos?</h2>
+							<p>Compartimos informacion, curiosidades, y misterios del basto universo para aquellos fanaticos de la astronomia.</p>
+							<div class="features">
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Pagina WEB</h3>
+									<p>Realizamos la pagina con codigo html, implementando firebase asi como js.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-lock"></span>
+									<h3>Seguridad</h3>
+									<p>Garantizamos la seguridad y privacidad de la informacion de nuestros usuarios.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-cog"></span>
+									<h3>Configuracion</h3>
+									<p>Configura tu perfil a tu manera y disfruta de nuestra aplicacion.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-desktop"></span>
+									<h3>Responsividad</h3>
+									<p>Disfruta de nuestra aplicacion en cualquiera de tus dispositivos.</p>
+								</section>
+								
+							</div>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Conoce más</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Three -->
+				<section id="three" class="wrapper style1 fade-up formLogin">
+					<div class="inner">
+						<h2>Registro</h2>
+						<p>Regístrate o inicia sesión y disfruta más de nuestra aplicación.</p>
+						<div class="split style1">
+							<section>
+								<!-- Agrega el ID 'registroForm' al formulario -->
+								<form id="frm_register" method="post" enctype="multipart/form-data" autocomplete="off">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Nombre</label>
+											<!-- Agrega el ID 'nombre' al campo de nombre -->
+											<input type="text" name="regName" id="regName" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<!-- Agrega el ID 'emailRegistro' al campo de email -->
+											<input type="text" name="regEmail" id="regEmail" />
+										</div>
+										<div class="field half">
+											<label for="contraseña" >Contraseña</label>
+											<!-- Agrega el ID 'contraseñaRegistro' al campo de contraseña -->
+											<input type="text" name="regPassword" id="regPassword" />
+										</div>
+										<div class="field half">
+											<label for="contraseña" >Repetir Contraseña</label>
+											<!-- Agrega el ID 'contraseñaRegistro' al campo de contraseña -->
+											<input type="text" name="regRePassword" id="regRePassword" />
+										</div>
+									</div>
+									<ul class="actions">
+										<li><button type="submit" class="button submit">Regístrate</button></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<form id="frm_login" method="post" enctype="multipart/form-data" autocomplete="off">
+									<ul class="contact">
+										<li>
+											<h3>O inicia sesión.</h3>
+										</li>
+										<li>
+											<h3>Email</h3>
+											<input type="text" name="logEmail" id="logEmail" />
+										</li>
+										<li>
+											<h3>Contraseña</h3>
+											<input type="password" name="logPassword" id="logPassword" />
+										</li>
+										<br>
+										<br>
+										<ul class="actions">
+											<li><button type="submit" class="button submit">Iniciar sesión</button></li>
+										</ul>
+									</ul>
+								</form>
+							</section>
+						</div>
+					</div>
+				</section>
+
+					<section id="usuario" class="wrapper style2 fade-up isLogged">
+						<div class="inner">
+							<h2>Usuario</h2>
+							<p>Bienvenido!.</p>
+							<div class="split style1">
+								<section>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field">
+												<label for="name">Nombre</label>
+												<input type="text" id="userName" value="Nombre actual">
+											</div>										
+										</div>
+										<br>
+										<div class="fields">
+											<div class="field">
+												<label for="email">Email</label>
+												<input type="text" id="userEmail">
+											</div>											
+										</div>
+									<form id="frm_usuario">
+										<ul class="actions">
+											<li><button onclick="cambiarNombre()" class="button submit">Actualizar nombre</button></li>
+										</ul>
+										<br>
+										<ul class="actions">
+											<li><button onclick="logout()" type="button" class="button">Salir</button></li>
+										</ul>
+									</form>
+									</form>
+								</section>
+								<a href="#" class="image"><img class="imagen_perfil" src="images/astrnautaPerfil.png" alt="" data-position="top center" /></a>
+								<section>
+					
+										
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			
+			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<script src="assets/js/messages_es.js"></script>
+
+			<script>
+				$(document).ready( function() {
+
+					$('#logPassword').val('');
+				
+					let $form = $("#frm_login");
+					$form.validate({
+						rules: {
+							logEmail: {
+								required: true,
+								maxlength: 100,
+								email: true
+							},
+							logPassword: {
+								required: true,
+								minlength: 5,
+							}
+						},
+						invalidHandler: function(event, validator) {
+							let errors = validator.numberOfInvalids();
+							if (errors) {
+								let message = errors === 1 ?
+									'You missed 1 field. It has been highlighted' :
+									'You missed ' + errors + ' fields. They have been highlighted';
+							}
+						},
+						submitHandler: function(form) {
+
+							let $form = $(form);
+							let urlaction = $(form).attr('action');
+							let datos = setDatos('frm_login');
+							let targetElement = event.target;
+				
+							const API_KEY = 'AIzaSyA68R_Y6mJ5icRQrKUU-fW5X81e4M98Dyo';
+							const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`;
+							
+							const authData = {
+								email: document.getElementById('logEmail').value,
+								password: document.getElementById('logPassword').value,
+								returnSecureToken: true 
+							}
+
+							
+				
+							// Realiza la petición POST
+							fetch(url, {
+								method: 'POST',
+								headers: {
+								'Content-Type': 'application/json' // Indica que los datos se enviarán en formato JSON
+								},
+								body: JSON.stringify(authData) // Convierte el objeto en formato JSON
+							})
+							.then(response => {
+								if (!response.ok) {
+								throw new Error('Error en la petición'); // Si la respuesta no es exitosa, lanza un error
+								}
+								return response.json(); // Convierte la respuesta a formato JSON
+							})
+							.then(data => {
+								localStorage.setItem("nombre", data.displayName);
+								localStorage.setItem("email", data.email);
+								window.location.replace("/");
+								// Aquí puedes manejar la respuesta del servidor
+								console.log('Respuesta del servidor:', data);
+							})
+							.catch(error => {
+								console.error('Error:', error);
+							});
+				
+						} //submit handler
+					});
+				
+					function setDatos(nombreForm) {
+						let data = $('#' + nombreForm).serializeArray();
+						let Datos = new FormData();
+						$('input[type="file"]').each(function ($i) {
+							Datos.append($(this).prop("name"), $(this)[0].files[0]);
+						});
+						$.each(data,
+								function (key, input) {
+									Datos.append(input.name, input.value);
+								});
+						return Datos;
+					}
+
+
+					// REGISTER
+					let $formLogin = $("#frm_register");
+					$formLogin.validate({
+						rules: {
+							regNombre: {
+								required: true,
+								maxlength: 100
+							},
+							regEmail: {
+								required: true,
+								email: true,
+								maxlength: 100
+							},
+							regPassword: {
+								required: true,
+								minlength: 5,
+							},
+							regRePassword: {
+								minlength: 5,
+								equalTo: "#regPassword"
+							}
+						},
+						invalidHandler: function(event, validator) {
+							let errors = validator.numberOfInvalids();
+							if (errors) {
+								let message = errors === 1 ?
+									'You missed 1 field. It has been highlighted' :
+									'You missed ' + errors + ' fields. They have been highlighted';
+							}
+						},
+						submitHandler: function(formLogin) {
+							
+							let $formLogin = $(formLogin);
+							let urlaction = $(formLogin).attr('action');
+							let datos = setDatos('frm_register');
+							let targetElement = event.target;
+
+							const API_KEY = 'AIzaSyA68R_Y6mJ5icRQrKUU-fW5X81e4M98Dyo';
+							const projectId = 'paginawebastro-81991';
+							const collectionName = 'nombre-de-la-coleccion';
+							const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
+							
+							const authData = {
+								email: document.getElementById('regEmail').value,
+								displayName: document.getElementById('regName').value,
+								password: document.getElementById('regPassword').value,
+								returnSecureToken: true,
+								role: "Admin" 
+
+								
+							}
+							
+							// Realiza la petición POST
+							fetch(url, {
+								method: 'POST',
+								headers: {
+								'Content-Type': 'application/json' // Indica que los datos se enviarán en formato JSON
+								},
+								body: JSON.stringify(authData) // Convierte el objeto en formato JSON
+							})
+								.then(response => {
+								if (!response.ok) {
+									throw new Error('Error en la petición'); // Si la respuesta no es exitosa, lanza un error
+								}
+								return response.json(); // Convierte la respuesta a formato JSON
+								})
+								.then(data => {
+									// Aquí puedes manejar la respuesta del servidor
+									console.log('Respuesta del servidor:', data);
+									location.reload();
+								})
+								.catch(error => {
+									// Maneja los errores que puedan ocurrir durante la petición
+									console.error('Error:', error);
+								});
+
+							} //submit handler
+						});
+				
+				});
+
+				// Carga datod del LOCALSTORAGE
+				// const miElemento = document.getElementById('logeado');
+				const userName = document.getElementById('userName');
+				const userEmail = document.getElementById('userEmail');
+		
+				// Obtener el nombre y correo del usuario almacenados en la Local Storage
+				const nombre = localStorage.getItem("nombre");
+				const email = localStorage.getItem("email");
+		
+				if (nombre !== null) {
+					// // cuando sea un label
+					// userName.textContent = nombre;
+					// userEmail.textContent = email;
+					
+					// cuando es un input
+					userName.value = nombre;
+					userEmail.value = email;
+					$('.isLogged').css('display','block');
+					$('.formLogin').css('display','none');
+				} else {
+					$('.isLogged').css('display','none');
+					$('.formLogin').css('display','block');
+				}
+
+
+				function logout(){
+					localStorage.removeItem("nombre");
+					localStorage.removeItem("email");
+					$('.isLogged').css('display','none');
+					$('.formLogin').css('display','block');
+				}
+
+				</script>
+
+				<script>
+					function cambiarNombre() {
+						var nuevoNombre = prompt("Ingresa tu nuevo nombre:");
+						if (nuevoNombre !== null) {
+							// Actualiza el campo de nombre en el formulario
+							var userName = document.getElementById('userName');
+							if (userName) {
+								userName.value = nuevoNombre;
+							}
+							// Envía el formulario
+							document.getElementById("frm_usuario").submit();
+						}
+					}
+				
+				</script>
+
+
+			
+	</body>
+</html>
